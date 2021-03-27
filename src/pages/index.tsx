@@ -17,32 +17,36 @@ const Home: React.FC<PageProps<DataProps>> = ({ data, path }) => {
         description="カルキチ副島の自己紹介サイト"
         title='My Propfile Site'
       />
-      <h1>Gatsby supports TypeScript by default!</h1>
-      <p>トップページのメインコンテンツ！</p>
-      <button className="block uppercase mx-auto shadow bg-indigo-800 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded">
-        Tailwind test
-      </button>
-      <p>
-        This means that you can create and write <em>.ts/.tsx</em> files for your
-        pages, components etc. Please note that the <em>gatsby-*.js</em> files
-        (like gatsby-node.js) currently don't support TypeScript yet.
-      </p>
-      <p>
-        For type checking you'll want to install <em>typescript</em> via npm and
-        run <em>tsc --init</em> to create a <em>.tsconfig</em> file.
-      </p>
-      <p>
-        You're currently on the page "{path}" which was built on{" "}
-        {data.site.buildTime}.
-      </p>
-      <p>
-        To learn more, head over to our{" "}
-        <a href="https://www.gatsbyjs.com/docs/typescript/">
-          documentation about TypeScript
-        </a>
-        .
-      </p>
-      <Link to="/">Go back to the homepage</Link>
+      <h2 className="heading">カルキチ副島</h2>
+      <p>どちらかというとフロントの方が好きですが、5月からはバックエンドメインでやることになりそうです。</p>
+      <p>JamstackとVimが好きです。</p>
+      <h2 className="heading">Career</h2>
+      <p>簡単なHTMLコーディング・サイトデザイン: 2018〜2019</p>
+      <p>ウェブ制作・ウェブ開発: 2020〜</p>
+      <h2 className="heading">Skills</h2>
+      <div className="flex flex-wrap max-w-screen-sm">
+        <span className="label">HTML</span>
+        <span className="label">CSS・SCSS</span>
+        <span className="label">JavaScript</span>
+        <span className="label">TypeScript</span>
+        <span className="label">React</span>
+        <span className="label">PHP</span>
+        <span className="label">Laravel</span>
+        <span className="label">WordPress</span>
+        <span className="label">Docker</span>
+      </div>
+      <h2 className="heading">Twitter・GitHub・Blog</h2>
+      <ul className="ml-5 list-disc">
+        <li>
+          <a href="https://twitter.com/karukichi_yah">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/Yota-K">GitHub</a>
+        </li>
+        <li>
+          <a href="https://karukichi-blog.netlify.app/">カルキチのブログ</a>
+        </li>
+      </ul>
     </Layout>
   )
 }
