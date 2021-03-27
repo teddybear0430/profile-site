@@ -33,6 +33,8 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     // GraphQLリクエストのレスポンスの型を生成するプラグイン
-    `gatsby-plugin-typegen`
+    `gatsby-plugin-typegen`,
+    // Gatsbyでpostcssを使うために必要
+    `gatsby-plugin-postcss`
   ],
 }

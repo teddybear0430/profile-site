@@ -18,6 +18,10 @@ const Home: React.FC<PageProps<DataProps>> = ({ data, path }) => {
         title='My Propfile Site'
       />
       <h1>Gatsby supports TypeScript by default!</h1>
+      <p>トップページのメインコンテンツ！</p>
+      <button className="block uppercase mx-auto shadow bg-indigo-800 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded">
+        Tailwind test
+      </button>
       <p>
         This means that you can create and write <em>.ts/.tsx</em> files for your
         pages, components etc. Please note that the <em>gatsby-*.js</em> files

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import './layout.css'
+import '../utils/global.css'
 
 type Props = {
   children: React.ReactNode;
