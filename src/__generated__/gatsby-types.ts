@@ -598,6 +598,10 @@ type SitePluginPluginOptions = {
   readonly crossOrigin: Maybe<Scalars['String']>;
   readonly include_favicon: Maybe<Scalars['Boolean']>;
   readonly cacheDigest: Maybe<Scalars['String']>;
+  readonly regected: Maybe<Scalars['Boolean']>;
+  readonly printRejected: Maybe<Scalars['Boolean']>;
+  readonly tailwind: Maybe<Scalars['Boolean']>;
+  readonly develop: Maybe<Scalars['Boolean']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
   readonly allExtensions: Maybe<Scalars['Boolean']>;
   readonly isTSX: Maybe<Scalars['Boolean']>;
@@ -1752,6 +1756,10 @@ type SitePluginPluginOptionsFilterInput = {
   readonly crossOrigin: Maybe<StringQueryOperatorInput>;
   readonly include_favicon: Maybe<BooleanQueryOperatorInput>;
   readonly cacheDigest: Maybe<StringQueryOperatorInput>;
+  readonly regected: Maybe<BooleanQueryOperatorInput>;
+  readonly printRejected: Maybe<BooleanQueryOperatorInput>;
+  readonly tailwind: Maybe<BooleanQueryOperatorInput>;
+  readonly develop: Maybe<BooleanQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
   readonly allExtensions: Maybe<BooleanQueryOperatorInput>;
   readonly isTSX: Maybe<BooleanQueryOperatorInput>;
@@ -1976,6 +1984,10 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.crossOrigin'
   | 'pluginCreator.pluginOptions.include_favicon'
   | 'pluginCreator.pluginOptions.cacheDigest'
+  | 'pluginCreator.pluginOptions.regected'
+  | 'pluginCreator.pluginOptions.printRejected'
+  | 'pluginCreator.pluginOptions.tailwind'
+  | 'pluginCreator.pluginOptions.develop'
   | 'pluginCreator.pluginOptions.pathCheck'
   | 'pluginCreator.pluginOptions.allExtensions'
   | 'pluginCreator.pluginOptions.isTSX'
@@ -2466,6 +2478,10 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.crossOrigin'
   | 'pluginOptions.include_favicon'
   | 'pluginOptions.cacheDigest'
+  | 'pluginOptions.regected'
+  | 'pluginOptions.printRejected'
+  | 'pluginOptions.tailwind'
+  | 'pluginOptions.develop'
   | 'pluginOptions.pathCheck'
   | 'pluginOptions.allExtensions'
   | 'pluginOptions.isTSX'

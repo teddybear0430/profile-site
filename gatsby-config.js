@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `My Profile Site`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `カルキチ副島`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,6 +35,21 @@ module.exports = {
     // GraphQLリクエストのレスポンスの型を生成するプラグイン
     `gatsby-plugin-typegen`,
     // Gatsbyでpostcssを使うために必要
-    `gatsby-plugin-postcss`
+    `gatsby-plugin-postcss`,
+      {
+      // ビルド時に、tailwindcssの実際に使われているクラスをチェックし、
+      // そのクラスのスタイルだけをCSSファイルに含めるようにする
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        // 削除されたCSSの容量を表示 
+        regected: true,
+        // 削除したCSSを最大100個まで一覧表示
+        printRejected: false,
+        // TailwindCSS使用時はTrue default: false
+        tailwind: true,
+        // 開発環境でbuildした時もCSSを削除
+        develop: false,
+      },
+    }
   ],
 }
