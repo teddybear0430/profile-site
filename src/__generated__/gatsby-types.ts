@@ -2525,15 +2525,15 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
+type usersyotakobaiDocumentsreactprofileSitesrcpagesindexTsx2907560070QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type usersyotakobaiDocumentsreactprofileSitesrcpagesindexTsx2907560070Query = { readonly site: Maybe<Pick<Site, 'buildTime'>> };
+
 type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type Unnamed_1_Query = { readonly site: Maybe<Pick<Site, 'buildTime'>> };
-
-type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type Unnamed_2_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
+type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
 type SiteTitleQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
