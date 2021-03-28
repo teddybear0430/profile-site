@@ -1,23 +1,43 @@
 import * as React from 'react'
-import { PageProps, Link, graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-type DataProps = {
-  site: {
-    buildTime: string
+export const query = graphql`
+  query Home {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+      }
+    }
+    icon: file(relativePath: {eq: "icon.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 200, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
-}
+`;
 
-const Home: React.FC<PageProps<DataProps>> = ({ data, path }) => {
+const Home = ({ data }: PageProps<GatsbyTypes.HomeQuery>) => {
+  const title = data.site?.siteMetadata?.title;
+  const description = data.site?.siteMetadata?.description;
+  const author = data.site?.siteMetadata?.author;
+
   return (
     <Layout>
-      <SEO 
-        description="カルキチ副島の自己紹介サイト"
-        title='My Propfile Site'
+      <SEO
+        title={title}
+        description={description}
+        author={author}
       />
-      <h2 className="heading">カルキチ副島</h2>
+      <h2 className="heading">{author}</h2>
+      <Img className="w-32 rounded-full border border-gray-200 my-2" fluid={data.icon?.childImageSharp?.fluid!} />
       <p>どちらかというとフロントの方が好きですが、5月からはバックエンドメインでやることになりそうです。</p>
       <p>JamstackとVimが好きです。</p>
       <h2 className="heading">Career</h2>
@@ -52,11 +72,3 @@ const Home: React.FC<PageProps<DataProps>> = ({ data, path }) => {
 }
 
 export default Home
-
-export const query = graphql`
-  {
-    site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
-    }
-  }
-`

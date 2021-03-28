@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `My Profile Site`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `カルキチ副島の自己紹介サイト`,
     author: `カルキチ副島`,
   },
   plugins: [
@@ -33,7 +33,14 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     // GraphQLリクエストのレスポンスの型を生成するプラグイン
-    `gatsby-plugin-typegen`,
+    {
+      resolve: 'gatsby-plugin-graphql-codegen',
+      options: {
+        // Maybeの型定義をオーバーライドする
+        // https://qiita.com/dozensofdars/items/a5d5a68104cb6fea30cf
+        codegenConfig: { maybeValue: 'T | undefined' }, // これを追加！
+      },
+    },
     // Gatsbyでpostcssを使うために必要
     `gatsby-plugin-postcss`,
       {
