@@ -34,7 +34,7 @@ module.exports = {
     // `gatsby-plugin-offline`,
     // GraphQLリクエストのレスポンスの型を生成するプラグイン
     {
-      resolve: 'gatsby-plugin-graphql-codegen',
+      resolve: `gatsby-plugin-graphql-codegen`,
       options: {
         // Maybeの型定義をオーバーライドする
         // https://qiita.com/dozensofdars/items/a5d5a68104cb6fea30cf
