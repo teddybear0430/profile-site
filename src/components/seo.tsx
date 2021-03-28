@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { Helmet } from 'react-helmet'
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
 
 type Props = {
   title?: string;
   description?: string;
   author?: string;
-}
+};
 
 function SEO({ title, description, author }: Props) {
   return (
@@ -49,7 +49,7 @@ function SEO({ title, description, author }: Props) {
         },
       ]}
     />
-  )
+  );
 }
 
-export default SEO
+export default SEO;

@@ -43,12 +43,12 @@ module.exports = {
     },
     // Gatsbyでpostcssを使うために必要
     `gatsby-plugin-postcss`,
-      {
+    {
       // ビルド時に、tailwindcssの実際に使われているクラスをチェックし、
       // そのクラスのスタイルだけをCSSファイルに含めるようにする
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        // 削除されたCSSの容量を表示 
+        // 削除されたCSSの容量を表示
         regected: true,
         // 削除したCSSを最大100個まで一覧表示
         printRejected: false,
@@ -57,6 +57,6 @@ module.exports = {
         // 開発環境でbuildした時もCSSを削除
         develop: false,
       },
-    }
+    },
   ],
-}
+};

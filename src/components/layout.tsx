@@ -1,12 +1,12 @@
-import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './header'
-import '../utils/global.css'
+import Header from './header';
+import '../utils/global.css';
 
 type Props = {
   children: React.ReactNode;
-}
+};
 
 const Layout = ({ children }: Props) => {
   const data = useStaticQuery<GatsbyTypes.SiteTitleQueryQuery>(graphql`
@@ -17,7 +17,7 @@ const Layout = ({ children }: Props) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -26,7 +26,7 @@ const Layout = ({ children }: Props) => {
         <main>{children}</main>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

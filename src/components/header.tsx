@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import * as React from 'react';
+import { Link } from 'gatsby';
 
 type Props = {
   siteTitle: string;
-}
+};
 
 const Header = ({ siteTitle }: Props) => (
   <header className="mb-4 p-4 bg-indigo-600">
@@ -13,6 +13,6 @@ const Header = ({ siteTitle }: Props) => (
       </h1>
     </div>
   </header>
-)
+);
 
-export default Header
+export default Header;
