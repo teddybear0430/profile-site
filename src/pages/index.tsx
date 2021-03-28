@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { graphql, PageProps } from 'gatsby'
-import Img from 'gatsby-image'
+import * as React from 'react';
+import { graphql, PageProps } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 export const query = graphql`
   query Home {
@@ -14,7 +14,7 @@ export const query = graphql`
         author
       }
     }
-    icon: file(relativePath: {eq: "icon.png"}) {
+    icon: file(relativePath: { eq: "icon.png" }) {
       childImageSharp {
         fluid(maxWidth: 200, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -31,11 +31,7 @@ const Home = ({ data }: PageProps<GatsbyTypes.HomeQuery>) => {
 
   return (
     <Layout>
-      <SEO
-        title={title}
-        description={description}
-        author={author}
-      />
+      <SEO title={title} description={description} author={author} />
       <h2 className="heading">{author}</h2>
       <Img className="w-32 rounded-full border border-gray-200 my-2" fluid={data.icon?.childImageSharp?.fluid!} />
       <p>どちらかというとフロントの方が好きですが、5月からはバックエンドメインでやることになりそうです。</p>
@@ -58,17 +54,23 @@ const Home = ({ data }: PageProps<GatsbyTypes.HomeQuery>) => {
       <h2 className="heading">Twitter・GitHub・Blog</h2>
       <ul className="ml-5 list-disc">
         <li>
-          <a href="https://twitter.com/karukichi_yah">Twitter</a>
+          <a className="hover:text-indigo-600" href="https://twitter.com/karukichi_yah">
+            Twitter
+          </a>
         </li>
         <li>
-          <a href="https://github.com/Yota-K">GitHub</a>
+          <a className="hover:text-indigo-600" href="https://github.com/Yota-K">
+            GitHub
+          </a>
         </li>
         <li>
-          <a href="https://karukichi-blog.netlify.app/">カルキチのブログ</a>
+          <a className="hover:text-indigo-600" href="https://karukichi-blog.netlify.app/">
+            カルキチのブログ
+          </a>
         </li>
       </ul>
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
