@@ -29,17 +29,7 @@ const Home = ({ data }: PageProps<GatsbyTypes.HomeQuery>) => {
   const description = data.site?.siteMetadata?.description;
   const author = data.site?.siteMetadata?.author;
 
-  const labels = [
-    'HTML',
-    'CSS・SCSS',
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'PHP',
-    'Laravel',
-    'WordPress',
-    'Docker'
-  ];
+  const labels = ['HTML', 'CSS・SCSS', 'JavaScript', 'TypeScript', 'React', 'PHP', 'Laravel', 'WordPress', 'Docker'];
 
   const urls = [
     {
@@ -53,7 +43,7 @@ const Home = ({ data }: PageProps<GatsbyTypes.HomeQuery>) => {
     {
       name: 'カルキチのブログ',
       url: 'https://karukichi-blog.netlify.app/',
-    }
+    },
   ];
 
   return (
@@ -64,13 +54,17 @@ const Home = ({ data }: PageProps<GatsbyTypes.HomeQuery>) => {
       <div className="md:text-base text-sm">
         <p>東京23区のどこかに住んでるウェブエンジニアです。</p>
         <p>ウェブエンジニアになる前に、HTML・CSS・WordPress・jQueryを使ったサイトのコーディングと</p>
-        <p>デザイン（フォトショ・イラレ）をやっていた時期があったので、ウェブに携わってる期間自体は3年くらいあります。</p>
+        <p>
+          デザイン（フォトショ・イラレ）をやっていた時期があったので、ウェブに携わってる期間自体は3年くらいあります。
+        </p>
         <br />
         <p>デザインが苦手だったことや、なんとなくコーディングよりもウェブ開発の方が性に合ってそうと考えたのを機に、</p>
         <p>2019年の5月頃からプログラミングの学習を開始。</p>
         <p>2020年頃からウェブエンジニアとしてのキャリアをスタートしました。</p>
         <br />
-        <p>どちらかというとフロントの方が好きですが、転職を機に2021年の5月からはバックエンドメインでやることになりそうです。</p>
+        <p>
+          どちらかというとフロントの方が好きですが、転職を機に2021年の5月からはバックエンドメインでやることになりそうです。
+        </p>
         <p>JamstackとVimが特に好きで、最近はCLIツール（tmux・Tig・rangerあたりがきてる）にも興味が出てきました。</p>
       </div>
       <h2 className="heading">Career</h2>
@@ -80,15 +74,19 @@ const Home = ({ data }: PageProps<GatsbyTypes.HomeQuery>) => {
       </div>
       <h2 className="heading">Skills</h2>
       <div className="flex flex-wrap max-w-screen-sm md:text-base text-sm">
-        {labels.map((el , i) => (
-          <span key={i} className="label">{el}</span>
+        {labels.map((el, i) => (
+          <span key={i} className="label">
+            {el}
+          </span>
         ))}
       </div>
       <h2 className="heading">Twitter・GitHub・Blog</h2>
       <ul className="ml-5 list-disc md:text-base text-sm">
-        {urls.map((el , i) => (
+        {urls.map((el, i) => (
           <li>
-            <a key={i} className="hover:text-indigo-600" href={el.url}>{el.name}</a>
+            <a key={i} className="hover:text-indigo-600" href={el.url}>
+              {el.name}
+            </a>
           </li>
         ))}
       </ul>
