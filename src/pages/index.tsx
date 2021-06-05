@@ -29,7 +29,18 @@ const Home = ({ data }: PageProps<GatsbyTypes.HomeQuery>) => {
   const description = data.site?.siteMetadata?.description;
   const author = data.site?.siteMetadata?.author;
 
-  const labels = ['HTML', 'CSS・SCSS', 'JavaScript', 'TypeScript', 'React', 'PHP', 'Laravel', 'WordPress', 'Docker'];
+  const labels = [
+    'HTML',
+    'CSS・SCSS',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Vue',
+    'PHP',
+    'Laravel',
+    'WordPress',
+    'Docker',
+  ];
 
   const urls = [
     {
