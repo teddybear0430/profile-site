@@ -62,10 +62,7 @@ const Home = ({ data }: PageProps<GatsbyTypes.HomeQuery>) => {
         <p>2019年の5月頃からプログラミングの学習を開始。</p>
         <p>2020年頃からウェブエンジニアとしてのキャリアをスタートしました。</p>
         <br />
-        <p>
-          どちらかというとフロントの方が好きですが、転職を機に2021年の5月からはバックエンドメインでやることになりそうです。
-        </p>
-        <p>JamstackとVimが特に好きで、最近はCLIツール（tmux・Tig・rangerあたりがきてる）にも興味が出てきました。</p>
+        <p>JamstackとVimが好きで、最近はCUIツール（tmux・Tig・rangerあたりがきてる）にも興味が出てきました。</p>
       </div>
       <h2 className="heading">Career</h2>
       <div className="md:text-base text-sm">
